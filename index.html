@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Steven Reyes</title>
-<meta name="description" content="Network operations engineer in the Tampa Bay area, specializing in Cisco Unified Communications.">
+<meta name="description" content="Network operations engineer. Enterprise routing, voice, and security. Remote or Tampa Bay.">
 <style>
   :root {
     --bg: #ffffff;
@@ -43,8 +43,13 @@
   }
   .tagline {
     color: var(--muted);
-    margin: 0 0 2.5rem;
+    margin: 0 0 .15rem;
     font-size: 1rem;
+  }
+  .where {
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+    font-size: .92rem;
   }
   h2 {
     font-size: .8rem;
@@ -66,6 +71,15 @@
   .meta { color: var(--muted); font-size: .88rem; }
   ul.plain { list-style: none; margin: 0; padding: 0; }
   ul.plain li { margin-bottom: .55rem; }
+  dl.stack { margin: 0; }
+  dl.stack dt {
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--muted);
+    margin-top: .9rem;
+  }
+  dl.stack dd { margin: .15rem 0 0; }
   .status { color: var(--muted); }
   footer {
     margin-top: 3.5rem;
@@ -80,32 +94,51 @@
 <main>
 
   <h1>Steven Reyes</h1>
-  <p class="tagline">Network operations engineer, Tampa Bay. Cisco Unified Communications.</p>
+  <p class="tagline">Network operations engineer. Routing, voice, and security.</p>
+  <p class="where">Remote, or on-site in the Tampa Bay area.</p>
 
   <p>
-    Over fifteen years in managed services and network operations, most of it in a
-    NOC: monitoring, escalation, incident response, and the unglamorous work of
-    keeping other people's networks up at hours nobody else wants. I am moving that
-    experience toward Unified Communications and voice, which is the part of the
-    stack I find most interesting and the part I have spent the last stretch
-    building hands-on.
+    Sixteen years in enterprise managed services and network operations, 2009 to
+    2025, at a single MSP through three names and an acquisition. The work was
+    Fortune 500 environments across hundreds of multi-site locations: incident
+    management from first alert through carrier ticket, field dispatch, Cisco TAC
+    escalation, and executive bridge calls during outages that had a CFO on the
+    line. Routing and switching, SD-WAN, firewall policy, DNS and IPAM, and the
+    carrier coordination that holds it all together.
   </p>
   <p>
-    Most of what I know beyond the day job comes out of a Proxmox homelab that I run
-    like production, because treating it that way is the only way it teaches you
-    anything. The writeups below are what came out of it.
+    I run a Proxmox homelab like production, because treating it that way is the
+    only way it teaches you anything. It is where I go deeper than the day job
+    allowed, most of all on Cisco voice. The writeups below are what came out of it.
   </p>
+
+  <h2>Background</h2>
+  <dl class="stack">
+    <dt>Routing and switching</dt>
+    <dd>BGP, OSPF, MPLS, VLANs, 802.1Q, IPsec and SSL VPN, Cisco IOS, Meraki</dd>
+
+    <dt>WAN and carrier</dt>
+    <dd>SD-WAN (Silver Peak, HPE Aruba EdgeConnect), multi-circuit failover, Cradlepoint cellular, carrier escalation with AT&amp;T, Verizon, Spectrum, and Lumen</dd>
+
+    <dt>Voice</dt>
+    <dd>Cisco Unified Communications, CUCM, Unity Connection, SIP trunking, dial plan and class-of-service design</dd>
+
+    <dt>Security</dt>
+    <dd>Palo Alto Networks, Fortinet, Cisco ASA, Zscaler, firewall policy review, Wazuh, Suricata</dd>
+
+    <dt>Platforms and monitoring</dt>
+    <dd>Linux (Debian), Proxmox, Infoblox DNS and IPAM, SolarWinds, LogicMonitor, ServiceNow, P1/P2/P3 incident management, Python and Bash</dd>
+  </dl>
 
   <h2>Projects</h2>
 
   <div class="project">
-    <h3><a href="https://github.com/reyes01101/cucm-uc-homelab">CUCM 14 and Unity Connection 12.5 homelab</a></h3>
+    <h3>CUCM 14 and Unity Connection 12.5 homelab</h3>
     <p>
       A full Cisco UC stack built from the installer up on Proxmox rather than
       VMware: call control, a SIP-integrated voicemail platform, and a dial plan
       that enforces calling privileges through partitions and calling search
-      spaces. Includes the failures, which are the useful part. Written as CCNP
-      Collaboration preparation.
+      spaces. Includes the failures, which are the useful part.
     </p>
     <p class="meta">CUCM 14, Unity Connection 12.5, SIP trunking, dial plan design, Proxmox</p>
   </div>
@@ -136,8 +169,9 @@
 
   <h2>Contact</h2>
   <ul class="plain">
+    <li><a href="mailto:steven@stevenreyes.dev">steven@stevenreyes.dev</a></li>
     <li><a href="https://github.com/reyes01101">github.com/reyes01101</a></li>
-    <li><a href="https://www.linkedin.com/in/steven-reyes-38645514">linkedin.com/in/steven-reyes-38645514</a></li>
+    <li><a href="https://www.linkedin.com/in/steven-reyes-tampa">linkedin.com/in/steven-reyes-tampa</a></li>
   </ul>
 
   <footer>
