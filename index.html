@@ -1,12 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Steven Reyes</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steven Reyes</title>
+<meta name="description" content="Network operations engineer in the Tampa Bay area, specializing in Cisco Unified Communications.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5c5c5c;
+    --rule: #e2e2e2;
+    --link: #0b5cad;
+    --accent: #0b5cad;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #e8e8e8;
+      --muted: #9aa0a8;
+      --rule: #2b2f36;
+      --link: #7cb3f0;
+      --accent: #7cb3f0;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 3rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 40rem; margin: 0 auto; }
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin: 0 0 .2rem;
+    letter-spacing: -.01em;
+  }
+  .tagline {
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 2.75rem 0 .9rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  p { margin: 0 0 1rem; }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover, a:focus { border-bottom-color: var(--link); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .project { margin: 0 0 1.5rem; }
+  .project h3 { font-size: 1rem; margin: 0 0 .3rem; font-weight: 600; }
+  .project p { margin: 0 0 .35rem; }
+  .meta { color: var(--muted); font-size: .88rem; }
+  ul.plain { list-style: none; margin: 0; padding: 0; }
+  ul.plain li { margin-bottom: .55rem; }
+  .status { color: var(--muted); }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .85rem;
+  }
+</style>
 </head>
 <body>
+<main>
+
   <h1>Steven Reyes</h1>
-  <p>Network Operations Engineer. Site under construction.</p>
+  <p class="tagline">Network operations engineer, Tampa Bay. Cisco Unified Communications.</p>
+
+  <p>
+    Over fifteen years in managed services and network operations, most of it in a
+    NOC: monitoring, escalation, incident response, and the unglamorous work of
+    keeping other people's networks up at hours nobody else wants. I am moving that
+    experience toward Unified Communications and voice, which is the part of the
+    stack I find most interesting and the part I have spent the last stretch
+    building hands-on.
+  </p>
+  <p>
+    Most of what I know beyond the day job comes out of a Proxmox homelab that I run
+    like production, because treating it that way is the only way it teaches you
+    anything. The writeups below are what came out of it.
+  </p>
+
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3><a href="https://github.com/reyes01101/cucm-uc-homelab">CUCM 14 and Unity Connection 12.5 homelab</a></h3>
+    <p>
+      A full Cisco UC stack built from the installer up on Proxmox rather than
+      VMware: call control, a SIP-integrated voicemail platform, and a dial plan
+      that enforces calling privileges through partitions and calling search
+      spaces. Includes the failures, which are the useful part. Written as CCNP
+      Collaboration preparation.
+    </p>
+    <p class="meta">CUCM 14, Unity Connection 12.5, SIP trunking, dial plan design, Proxmox</p>
+  </div>
+
+  <div class="project">
+    <h3>Security monitoring stack</h3>
+    <p>
+      Wazuh, Suricata, and Graylog deployed across the lab, with a writeup of how
+      the detection pipeline fits together.
+    </p>
+    <p class="meta status">Writeup in progress.</p>
+  </div>
+
+  <div class="project">
+    <h3>Ansible homelab automation</h3>
+    <p>
+      Playbooks and a multi-node Proxmox inventory structure for the parts of the
+      lab I got tired of doing by hand.
+    </p>
+    <p class="meta status">Writeup in progress.</p>
+  </div>
+
+  <h2>Certifications</h2>
+  <ul class="plain">
+    <li>CompTIA Security+ SY0-701 <span class="status">in progress, exam scheduled September 2026</span></li>
+    <li>CCNP Collaboration <span class="status">planned, starting with CLCOR</span></li>
+  </ul>
+
+  <h2>Contact</h2>
+  <ul class="plain">
+    <li><a href="mailto:reyes01101@proton.me">reyes01101@proton.me</a></li>
+    <li><a href="https://github.com/reyes01101">github.com/reyes01101</a></li>
+    <li><a href="https://www.linkedin.com/in/steven-reyes-38645514">linkedin.com/in/steven-reyes-38645514</a></li>
+  </ul>
+
+  <footer>
+    Hand-written HTML. No trackers, no analytics, no cookies.
+  </footer>
+
+</main>
 </body>
 </html>
